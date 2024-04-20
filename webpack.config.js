@@ -1,19 +1,19 @@
-const path = require('path'); // Импортируем модуль "path" для работы с путями файлов
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js', // Точка входа для сборки проекта
+    entry: './src/index.js',
 
     output: {
-        filename: 'bundle.js', // Имя выходного файла сборки
-        path: path.resolve(__dirname, 'dist'), // Путь для выходного файла сборки
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
     },
 
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'], // Загрузчики, используемые для обработки CSS-файлов
+                use: ['style-loader', 'css-loader'],
             },
         ],
     },
